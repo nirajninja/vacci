@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/map"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        />
+
+
+    <EditText
+
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg2"
+        android:gravity="center_horizontal"
+
+        android:textAlignment="center"
+        android:id="@+id/idEdtPinCode"
+        android:layout_height="30dp"
+        android:textSize="20dp"
+
+        android:layout_width="120dp"
+        android:textColorHint="@color/semiTransparentColor"
+
+        android:hint="PinCode"
+
+        android:inputType="number"
+        android:textColor="@color/white" />
+
+    <Button
+
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:background="@drawable/arrow_button"
+        android:id="@+id/idBtnSearch"
+
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/idEdtPinCode"
+        android:layout_marginTop="15dp"
+        
+
+         />
+
+
+    <ProgressBar
+        android:layout_marginTop="30dp"
+        android:id="@+id/idPBLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <!--recycler view for displaying results in the form of list-->
+    <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/centersRV"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idBtnSearch"
+        tools:listitem="@layout/center_rv_item" />
+
+</LinearLayout>
